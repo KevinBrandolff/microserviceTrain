@@ -1,0 +1,61 @@
+@startuml
+
+actor clientAuthenticated as client
+
+participant projectController
+participant projectService
+participant projectRepository
+
+database MySqlDB as database
+
+client -> projectController : GET localhost:8080/kevin/projects/
+projectController -> projectService : findAll()
+projectService -> projectRepository : findAll()
+projectRepository -> database : fetch projects
+
+database --> projectRepository : List<ProjectEntity>
+projectRepository --> projectService : List<ProjectEntity>
+projectService --> projectController : List<ProjectDTO>
+projectController --> client : List<ProjectDTO> ( Status 200 )
+
+client -> projectController : POST localhost:8080/kevin/projects/
+projectController -> projectService : createProject()
+projectService -> projectRepository : save()
+projectRepository -> database : save project
+
+database --> projectRepository : ProjectEntity
+projectRepository --> projectService : ProjectEntity
+projectService --> projectController : ProjectDTO
+projectController --> client : ProjectDTO ( Status 201 )
+
+client -> projectController : PUT localhost:8080/kevin/projects/
+projectController -> projectService : updateProject()
+projectService -> projectRepository : save()
+projectRepository -> database : update project
+
+database --> projectRepository : ProjectEntity
+projectRepository --> projectService : ProjectEntity
+projectService --> projectController : ProjectDTO
+projectController --> client : ProjectDTO ( Status 200 )
+
+client -> projectController : DELETE localhost:8080/kevin/projects/{id}
+projectController -> projectService : deleteById()
+projectService -> projectRepository : deleteById()
+projectRepository -> database : delete project
+
+database --> projectRepository : void
+projectRepository --> projectService : void
+projectService --> projectController : void
+projectController --> client : Status No Content
+
+client -> projectController : GET localhost:8080/kevin/projects/{id}
+projectController -> projectService : findById()
+projectService -> projectRepository : findById()
+projectRepository -> database : fetch project
+
+database --> projectRepository : ProjectEntity
+projectRepository --> projectService : ProjectEntity
+projectService --> projectController : ProjectDTO
+projectController --> client : ProjectDTO ( Status 200 )
+
+@enduml

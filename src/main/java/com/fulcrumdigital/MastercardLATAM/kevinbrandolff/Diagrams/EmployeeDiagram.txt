@@ -1,0 +1,61 @@
+@startuml
+
+actor clientAuthenticated as client
+
+participant employeeController
+participant employeeService
+participant employeeRepository
+
+database MySqlDB as database
+
+client -> employeeController : GET localhost:8080/kevin/employees/
+employeeController -> employeeService : findAll()
+employeeService -> employeeRepository : findAll()
+employeeRepository -> database : fetch employees
+
+database --> employeeRepository : List<EmployeeEntity>
+employeeRepository --> employeeService : List<EmployeeEntity>
+employeeService --> employeeController : List<EmployeeDTO>
+employeeController --> client : List<EmployeeDTO> ( Status 200 )
+
+client -> employeeController : POST localhost:8080/kevin/employees/
+employeeController -> employeeService : createEmployee()
+employeeService -> employeeRepository : save()
+employeeRepository -> database : save employee
+
+database --> employeeRepository : EmployeeEntity
+employeeRepository --> employeeService : EmployeeEntity
+employeeService --> employeeController : EmployeeDTO
+employeeController --> client : EmployeeDTO ( Status 201 )
+
+client -> employeeController : PUT localhost:8080/kevin/employees/
+employeeController -> employeeService : updateEmployee()
+employeeService -> employeeRepository : save()
+employeeRepository -> database : update employee
+
+database --> employeeRepository : EmployeeEntity
+employeeRepository --> employeeService : EmployeeEntity
+employeeService --> employeeController : EmployeeDTO
+employeeController --> client : EmployeeDTO ( Status 200 )
+
+client -> employeeController : DELETE localhost:8080/kevin/employees/{id}
+employeeController -> employeeService : deleteById()
+employeeService -> employeeRepository : deleteById()
+employeeRepository -> database : delete employee
+
+database --> employeeRepository : void
+employeeRepository --> employeeService : void
+employeeService --> employeeController : void
+employeeController --> client : Status No Content
+
+client -> employeeController : GET localhost:8080/kevin/employees/{id}
+employeeController -> employeeService : findById()
+employeeService -> employeeRepository : findById()
+employeeRepository -> database : fetch employee
+
+database --> employeeRepository : EmployeeEntity
+employeeRepository --> employeeService : EmployeeEntity
+employeeService --> employeeController : EmployeeDTO
+employeeController --> client : EmployeeDTO ( Status 200 )
+
+@enduml

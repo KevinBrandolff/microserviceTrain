@@ -1,0 +1,697 @@
+{
+	"info": {
+		"_postman_id": "e790c83d-22ed-4ff6-8790-67df27e087d2",
+		"name": "Fulcrum api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "projects",
+			"item": [
+				{
+					"name": "getProjects",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybyIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX01BTkFHRVIiLCJST0xFX0VNUExPWUVFIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9sb2dpbiIsImV4cCI6MTY0MjcwOTEzOX0.Y3kn7r1VDJ9VHSyPCEb6_C2IaN_yHZB6WjsnO0h4Mbc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "pedro",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "pedropedro",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/brunoferreira/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"brunoferreira",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProjectById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybyIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX01BTkFHRVIiLCJST0xFX0VNUExPWUVFIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9sb2dpbiIsImV4cCI6MTY0MjUzMzY3M30.AiDHXjhIv4q6yeCe4CGXkRc2g8W_Czd6bPuXlZGrJZA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/brunoferreira/projects/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"brunoferreira",
+								"projects",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProjects",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybyIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX01BTkFHRVIiLCJST0xFX0VNUExPWUVFIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9sb2dpbiIsImV4cCI6MTY0MjUzMzY3M30.AiDHXjhIv4q6yeCe4CGXkRc2g8W_Czd6bPuXlZGrJZA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/brunoferreira/projects/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"brunoferreira",
+								"projects",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProject",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybyIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX01BTkFHRVIiLCJST0xFX0VNUExPWUVFIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9sb2dpbiIsImV4cCI6MTY0MzA1NTY3M30.ylc_N9KtHLQ7X6uJF_UwOpHbbgBtzKq6AAjyb2vqRQA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"id\": 1,\r\n\"name\": \"New project name\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/brunoferreira/projects/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"brunoferreira",
+								"projects",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createProject",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybyIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX01BTkFHRVIiLCJST0xFX0VNUExPWUVFIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9sb2dpbiIsImV4cCI6MTY0MzA1NTY3M30.ylc_N9KtHLQ7X6uJF_UwOpHbbgBtzKq6AAjyb2vqRQA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\": \"Europe Mastercard 1\",\r\n\"description\": \"Great Project\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/brunoferreira/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"brunoferreira",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "employees",
+			"item": [
+				{
+					"name": "Get",
+					"item": [
+						{
+							"name": "getAll",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybyIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX01BTkFHRVIiLCJST0xFX0VNUExPWUVFIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9sb2dpbiIsImV4cCI6MTY0MjY5OTgyMn0.py2NHpNXy5Nuy-B0_VHwNCE_4bmj_D36aWibWfDdsRE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/brunoferreira/employees",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"brunoferreira",
+										"employees"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getEmployeesById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybyIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX01BTkFHRVIiLCJST0xFX0VNUExPWUVFIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9sb2dpbiIsImV4cCI6MTY0MjUzMzY3M30.AiDHXjhIv4q6yeCe4CGXkRc2g8W_Czd6bPuXlZGrJZA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/brunoferreira/employees",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"brunoferreira",
+										"employees"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getEmployeesByProjectId",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybyIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX01BTkFHRVIiLCJST0xFX0VNUExPWUVFIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9sb2dpbiIsImV4cCI6MTY0MjUzMzY3M30.AiDHXjhIv4q6yeCe4CGXkRc2g8W_Czd6bPuXlZGrJZA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/brunoferreira/projects/1/employees",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"brunoferreira",
+										"projects",
+										"1",
+										"employees"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Post",
+					"item": [
+						{
+							"name": "Create only employee",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybyIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX01BTkFHRVIiLCJST0xFX0VNUExPWUVFIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9sb2dpbiIsImV4cCI6MTY0MzA1NTY3M30.ylc_N9KtHLQ7X6uJF_UwOpHbbgBtzKq6AAjyb2vqRQA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"name\": \"Messi\",\r\n\"role\": \"developer\",\r\n\"department\": \"T.I\",\r\n\"salary\": \"5000.0\",\r\n\"createdAt\": \"2023-01-06 00:00:00\",\r\n\"updatedAt\": \"2023-01-06 00:00:00\",\r\n\"projects\": [\r\n    \r\n]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/brunoferreira/employees",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"brunoferreira",
+										"employees"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create employee with new projects",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybyIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX01BTkFHRVIiLCJST0xFX0VNUExPWUVFIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9sb2dpbiIsImV4cCI6MTY0Mjc2ODUxMH0.DJPtamF28yEOnGMnl4PHqtVjs8jg-f6D6_Co8x4cbhM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"New name\",\r\n    \"role\": \"developer\",\r\n    \"department\": \"T.I\",\r\n    \"salary\": 5000.0,\r\n    \"createdAt\": \"2023-01-06 00:00:00\",\r\n    \"updatedAt\": \"2023-01-06 00:00:00\",\r\n    \"projects\": [{\r\n        \"name\": \"LATAM 2 Mastercard\"\r\n    },\r\n    {\r\n        \"name\" : \"Europe 2 Mastercard\"\r\n    },\r\n    {\r\n        \"name\" : \"Fulcrum 2 Mastercard\"\r\n    }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/brunoferreira/employees",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"brunoferreira",
+										"employees"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"item": [
+						{
+							"name": "Update employee name without modifying projects",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybyIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX01BTkFHRVIiLCJST0xFX0VNUExPWUVFIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9sb2dpbiIsImV4cCI6MTY0MzA1NTQzMX0.jGirwb-bpHPwH4KbwzyMQ1bFB85TChb37r7ujELVKYI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 158,\r\n    \"name\": \"Matheus\",\r\n    \"role\": \"developer\",\r\n    \"department\": \"T.I\",\r\n    \"salary\": 5000.0,\r\n    \"createdAt\": \"2023-01-06 00:00:00\",\r\n    \"updatedAt\": \"2023-01-06 00:00:00\",\r\n    \"projects\": [{\r\n        \"name\": \"LATAM 2 Mastercard\"\r\n    },\r\n    {\r\n        \"name\" : \"Europe 2 Mastercard\"\r\n    },\r\n    {\r\n        \"name\" : \"Fulcrum 2 Mastercard\"\r\n    }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/brunoferreira/employees/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"brunoferreira",
+										"employees",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update employee with 1 new project.",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybyIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX01BTkFHRVIiLCJST0xFX0VNUExPWUVFIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9sb2dpbiIsImV4cCI6MTY0MzA1NTQzMX0.jGirwb-bpHPwH4KbwzyMQ1bFB85TChb37r7ujELVKYI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Matheus Messi\",\r\n    \"role\": \"developer\",\r\n    \"department\": \"T.I\",\r\n    \"salary\": 5000.0,\r\n    \"createdAt\": \"2023-01-06 00:00:00\",\r\n    \"updatedAt\": \"2023-01-06 00:00:00\",\r\n    \"projects\": [{\r\n\r\n        \"id\": 173,\r\n        \"name\": \"LATAM 2 Mastercard\"\r\n    },\r\n    {\r\n        \"id\": 174,\r\n        \"name\" : \"Europe 2 Mastercard\"\r\n    },\r\n    {\r\n        \"id\": 175,\r\n        \"name\" : \"Fulcrum 2 Mastercard\"\r\n    },\r\n    {\r\n        \"id\": 176,\r\n        \"name\" : \"BRAZIL\"\r\n    }\r\n\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/brunoferreira/employees/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"brunoferreira",
+										"employees",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update employee removing one project of the list",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybyIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX01BTkFHRVIiLCJST0xFX0VNUExPWUVFIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9sb2dpbiIsImV4cCI6MTY0MzA1NTQzMX0.jGirwb-bpHPwH4KbwzyMQ1bFB85TChb37r7ujELVKYI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 158,\r\n    \"name\": \"Matheus\",\r\n    \"role\": \"developer\",\r\n    \"department\": \"T.I\",\r\n    \"salary\": 5000.0,\r\n    \"createdAt\": \"2023-01-06 00:00:00\",\r\n    \"updatedAt\": \"2023-01-06 00:00:00\",\r\n    \"projects\": [{\r\n\r\n        \"id\": 173,\r\n        \"name\": \"LATAM 2 Mastercard\"\r\n    },\r\n    {\r\n        \"id\": 174,\r\n        \"name\" : \"Europe 2 Mastercard\"\r\n    }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/brunoferreira/employees/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"brunoferreira",
+										"employees",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update employee updating the name of 1 project",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybyIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX01BTkFHRVIiLCJST0xFX0VNUExPWUVFIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9sb2dpbiIsImV4cCI6MTY0MzA1NTQzMX0.jGirwb-bpHPwH4KbwzyMQ1bFB85TChb37r7ujELVKYI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 158,\r\n    \"name\": \"Matheus\",\r\n    \"role\": \"developer\",\r\n    \"department\": \"T.I\",\r\n    \"salary\": 5000.0,\r\n    \"createdAt\": \"2023-01-06 00:00:00\",\r\n    \"updatedAt\": \"2023-01-06 00:00:00\",\r\n    \"projects\": [{\r\n\r\n        \"id\": 173,\r\n        \"name\": \"LATAM 2 Mastercard\"\r\n    },\r\n    {\r\n        \"id\": 174,\r\n        \"name\" : \"europe 2040\"\r\n    }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/brunoferreira/employees/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"brunoferreira",
+										"employees",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"item": [
+						{
+							"name": "Delete employee",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybyIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX01BTkFHRVIiLCJST0xFX0VNUExPWUVFIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9sb2dpbiIsImV4cCI6MTY0MjUzMzY3M30.AiDHXjhIv4q6yeCe4CGXkRc2g8W_Czd6bPuXlZGrJZA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/brunoferreira/employees/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"brunoferreira",
+										"employees",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteEmployee Check that if 2 employees has X project, if i delete 1 employee the other should continue be present with the X project",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybyIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX01BTkFHRVIiLCJST0xFX0VNUExPWUVFIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9sb2dpbiIsImV4cCI6MTY0Mjc4MDM4MX0.NE_GH_Zduh1aVB5EhEdt8yXsrvseK4iIqYu0QmQfuGw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/brunoferreira/employees/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"brunoferreira",
+										"employees",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "login admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "pedro",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pedropedro",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "maria",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "mariamaria",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

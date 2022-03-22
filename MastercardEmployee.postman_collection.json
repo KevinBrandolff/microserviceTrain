@@ -1,0 +1,702 @@
+{
+	"info": {
+		"_postman_id": "59b6539e-85c2-45c1-a382-38a84564920b",
+		"name": "MastercardEmployee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "save Employee",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrZXZpbmFkbWluIiwiZXhwIjoxNjQzMTI4MDg0fQ.ckCJxCExLYfxlCWgjuskW0yOjHCvfzNuC5XVsu10r7L9vPMjBVcvERPENVB4a738SJ10-9VSmCCmy7rBLnKZmg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"kevin noite\",\r\n    \"register\":\"2313s13s1DaaadddfsdxsaadBaa\",\r\n    \"age\": 21,\r\n    \"address\": \"aasdsasadsad\",\r\n    \"salary\": 12313.23,\r\n    \"email\": \"sdssaaadsad@edadaaDdxdfsdsasdBaaddfasd.com\",\r\n    \"department\": \"fire\",\r\n    \"projects\":[\r\n                    {\r\n                        \"id\": 3,\r\n                        \"name\": \"project 3\",\r\n                        \"employees\": null\r\n                    },\r\n                    {\r\n                        \"id\": null,\r\n                        \"name\": \"project noite\",\r\n                        \"employees\": null\r\n                    }\r\n                ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/kevin/employee/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"employee",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find employee by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrZXZpbmFkbWluIiwiZXhwIjoxNjQzMDc4MDIwfQ.DWtVIbCkN1aQSycQ6OkGsD8a3nrA_zNdbnHjKMgbCrAAZieFPiQtIKUuWmLuzEXCAXctC7aDzxKc4YmzbFi1Cg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/kevin/employee/225",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"employee",
+								"225"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findall Employee",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrZXZpbnVzZXIiLCJleHAiOjE2NDIzNzY0MzN9.RzrQRvBuP22Lc0lmTT8SqGMzYzmUKJ8_868ie9Yf2wIbSh8-y29oc2-EhsVTXngAOt7EDNV-Q4rrMVsp2KzKcg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/kevin/employee/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"employee",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find all by name Employee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee/name/joao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"name",
+								"joao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit Employee",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrZXZpbmFkbWluIiwiZXhwIjoxNjQzMDc4MDIwfQ.DWtVIbCkN1aQSycQ6OkGsD8a3nrA_zNdbnHjKMgbCrAAZieFPiQtIKUuWmLuzEXCAXctC7aDzxKc4YmzbFi1Cg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 225,\r\n    \"name\": \"kevin noite\",\r\n    \"register\": \"2313s13s1DaaadddfsdxsaadBaa\",\r\n    \"age\": 21,\r\n    \"address\": \"aasdsasadsad\",\r\n    \"salary\": 12313.23,\r\n    \"email\": \"sdssaaadsad@edadaaDdxdfsdsasdBaaddfasd.com\",\r\n    \"department\": \"fire\",\r\n    \"projects\": [\r\n        {\r\n            \"id\": 29,\r\n            \"name\": \"project noite updated 5\",\r\n            \"employees\":  null\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"name\": \"project 3\",\r\n            \"employees\": null\r\n        }\r\n    ],\r\n    \"createdAt\": \"2022-01-24\",\r\n    \"updatedAt\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/kevin/employee/225",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"employee",
+								"225"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit Employee Copy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrZXZpbmFkbWluIiwiZXhwIjoxNjQyNzgxODYyfQ.I-Ow-hZ8hbFtB2oHc1Tzb6uuFi4P2MykfstPkPI-JJhiAps8aZXXtXzohNCeo_kx1wIuvZbhtkThYrMbMXUuAw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"cango\",\r\n    \"register\": \"123\",\r\n    \"age\": 20,\r\n    \"address\": \"wallstreet\",\r\n    \"salary\": 2000.0,\r\n    \"email\": \"a@a.com\",\r\n    \"department\": \"TI\",\r\n    \"projects\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"project 1\",\r\n            \"employees\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"name\": \"fabricio\",\r\n                    \"register\": \"123\",\r\n                    \"age\": 20,\r\n                    \"address\": \"wallstreet\",\r\n                    \"salary\": 2000.0,\r\n                    \"email\": \"a@a.com\",\r\n                    \"department\": \"TI\",\r\n                    \"projects\": null,\r\n                    \"createdAt\": \"2022-01-20\",\r\n                    \"updatedAt\": null\r\n                },\r\n                {\r\n                    \"id\": 2,\r\n                    \"name\": \"shirlei\",\r\n                    \"register\": \"456\",\r\n                    \"age\": 20,\r\n                    \"address\": \"wallstreet\",\r\n                    \"salary\": 3000.0,\r\n                    \"email\": \"a1@a.com\",\r\n                    \"department\": \"TI\",\r\n                    \"projects\": null,\r\n                    \"createdAt\": \"2022-01-20\",\r\n                    \"updatedAt\": null\r\n                }\r\n            ],\r\n            \"createdAt\": \"2022-01-21\",\r\n            \"updatedAt\": null\r\n        },\r\n        {\r\n            \"name\": \"project new\",\r\n            \"employees\": null\r\n        }\r\n    ],\r\n    \"createdAt\": \"2022-01-20\",\r\n    \"updatedAt\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/kevin/employee/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"employee",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit Employee Copy 2",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrZXZpbmFkbWluIiwiZXhwIjoxNjQyNzk3ODIyfQ.pOYTCtvraMQ0aRfn0sDSOF040z5HY0neLr6bBFdZ9Y5A-6SPnZYg8I1r5GpxpMulxFJQNkaMsmdHabEVFcC0iQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 148,\r\n    \"name\": \"kevin com um projeto existente 6 updated\",\r\n    \"register\": \"2313s13s1DaaaddfsdxsaadBaa\",\r\n    \"age\": 21,\r\n    \"address\": \"aasdsasadsad\",\r\n    \"salary\": 12313.23,\r\n    \"email\": \"sdssaaadsad@edadaaDxdfsdsasdBaaddfasd.com\",\r\n    \"department\": \"fire\",\r\n    \"projects\": [\r\n        {\r\n            \"id\": 3,\r\n            \"name\": \"project 3 updated\",\r\n            \"employees\": [\r\n                {\r\n                    \"id\": 148,\r\n                    \"name\": \"kevin com um projeto existente 6\",\r\n                    \"register\": \"2313s13s1DaaaddfsdxsaadBaa\",\r\n                    \"age\": 21,\r\n                    \"address\": \"aasdsasadsad\",\r\n                    \"salary\": 12313.23,\r\n                    \"email\": \"sdssaaadsad@edadaaDxdfsdsasdBaaddfasd.com\",\r\n                    \"department\": \"fire\",\r\n                    \"projects\": null,\r\n                    \"createdAt\": \"2022-01-21\",\r\n                    \"updatedAt\": null\r\n                },\r\n                {\r\n                    \"id\": 65,\r\n                    \"name\": \"kevin com um projeto existente 3\",\r\n                    \"register\": \"2313s13s1aaaddsxsaadBaa\",\r\n                    \"age\": 21,\r\n                    \"address\": \"aasdsasadsad\",\r\n                    \"salary\": 12313.23,\r\n                    \"email\": \"sdssaaadsad@edadaaxdssasdBaaddfasd.com\",\r\n                    \"department\": \"fire\",\r\n                    \"projects\": null,\r\n                    \"createdAt\": \"2022-01-21\",\r\n                    \"updatedAt\": null\r\n                }\r\n            ],\r\n            \"createdAt\": null,\r\n            \"updatedAt\": null\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"name\": \"project 4\",\r\n            \"employees\": null\r\n        }\r\n    ],\r\n    \"createdAt\": \"2022-01-21\",\r\n    \"updatedAt\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/kevin/employee/148",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"employee",
+								"148"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employee",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrZXZpbmFkbWluIiwiZXhwIjoxNjQyNzk3ODIyfQ.pOYTCtvraMQ0aRfn0sDSOF040z5HY0neLr6bBFdZ9Y5A-6SPnZYg8I1r5GpxpMulxFJQNkaMsmdHabEVFcC0iQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/kevin/employee/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"employee",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find by register",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrZXZpbiIsImV4cCI6MTY0MjM3NjA1N30.porIvyfsP-ZetLh46C4L8zvBhGbjDWbJYSjYTyPtEz0Bagu9u8WCPVreqJFPQJ_NC9ZAP7N5nyHVR_LDf0SVpA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/kevin/employee/register/32131321",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"employee",
+								"register",
+								"32131321"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find by age",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/kevin/employee/age/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"employee",
+								"age",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find all by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/kevin/employee/name/kevin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"employee",
+								"name",
+								"kevin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/kevin/employee/email/2132321",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"employee",
+								"email",
+								"2132321"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Project",
+			"item": [
+				{
+					"name": "save project with employees",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrZXZpbmFkbWluIiwiZXhwIjoxNjQzMDc4NTgzfQ.Pya2xbbpCEf7vKyTOpucTzdiuQ022mgJ0o3WrEhJ6KXwAdZXDdZWx5i7xMLyEeor3N7e_P_p15SPtEf0p5mcaQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"project teste noite 2\",\r\n    \"employees\":[\r\n        {\r\n            \"id\": null,\r\n            \"name\": \"kevin\",\r\n            \"register\": \"fsdfsdsf789\",\r\n            \"age\": 20,\r\n            \"address\": \"wallstreet\",\r\n            \"salary\": 4000.0,\r\n            \"email\": \"a2@fsdfssddfsa.com\",\r\n            \"department\": \"TI\",\r\n            \"projects\": null,\r\n            \"createdAt\": \"2022-01-20\",\r\n            \"updatedAt\": null\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/kevin/project/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"project",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save project with employees Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrZXZpbmFkbWluIiwiZXhwIjoxNjQzMDY0MzMyfQ.Pr2YNqdHAkQrKrmyxAQkQ8FWvpRTnxmGZSo0bJ-RCC3T_jhJZ2_1SkosdMKI8_ZbNwWJ2LuKb4fgPGQ_n6pvCA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"project teste 24-7\",\r\n    \"employees\":[\r\n        {\r\n            \"id\": null,\r\n            \"name\": \"kevin\",\r\n            \"register\": \"78fsdfs9\",\r\n            \"age\": 20,\r\n            \"address\": \"wallstreet\",\r\n            \"salary\": 4000.0,\r\n            \"email\": \"a2@fsdfdsfa.com\",\r\n            \"department\": \"TI\",\r\n            \"projects\": [],\r\n            \"createdAt\": \"2022-01-20\",\r\n            \"updatedAt\": null\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/kevin/project/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"project",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save project without  employees",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"project nnnew\",\r\n    \"employees\":null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/kevin/project/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"project",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find project by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrZXZpbnVzZXIiLCJleHAiOjE2NDMwNzczMzd9.EU_cKF24C4IjI5Yz4R-Mlfas6kwX8AgivwYY5EcKo3QkeF4OJsxQhdZTd5lL8UcAuX1qPfwHv60cj4vmLC0y9w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/kevin/project/29",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"project",
+								"29"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find all by employees id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/kevin/project/employee/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"project",
+								"employee",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update a project",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":9,\r\n    \"name\":\"joaozinho haha2\",\r\n    \"employees\":null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/kevin/project/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"project",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find all projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/kevin/project/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"project",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a employee to project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrZXZpbmFkbWluIiwiZXhwIjoxNjQyNzk3ODIyfQ.pOYTCtvraMQ0aRfn0sDSOF040z5HY0neLr6bBFdZ9Y5A-6SPnZYg8I1r5GpxpMulxFJQNkaMsmdHabEVFcC0iQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"kevin\",\r\n    \"register\": \"789\",\r\n    \"age\": 20,\r\n    \"address\": \"wallstreet\",\r\n    \"salary\": 4000.0,\r\n    \"email\": \"a2@a.com\",\r\n    \"department\": \"TI\",\r\n    \"projects\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/kevin/project/project/3/employee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"project",
+								"project",
+								"3",
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove a employee from a project",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"fabricio\",\r\n    \"register\": \"123\",\r\n    \"age\": 20,\r\n    \"address\": \"wallstreet\",\r\n    \"salary\": 2000.0,\r\n    \"email\": \"a@a.com\",\r\n    \"department\": \"TI\",\r\n    \"createdAt\": \"2021-12-28\",\r\n    \"updatedAt\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/kevin/project/project/11/employee/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"project",
+								"project",
+								"11",
+								"employee",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login / User",
+			"item": [
+				{
+					"name": "save user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"kevinuser\",\r\n    \"password\":\"123456\",\r\n    \"role\":\"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/kevin/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kevin",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"kevinadmin\",\r\n    \"password\":123456\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

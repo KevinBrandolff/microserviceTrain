@@ -1,0 +1,22 @@
+@startuml
+
+actor client as client
+
+participant userController
+participant userService
+participant userRepository
+
+database MySqlDB as database
+
+
+client -> userController : POST localhost:8080/kevin/user/
+userController -> userService : createUser()
+userService -> userRepository : save()
+userRepository -> database : save user
+
+database --> userRepository : UserEntity
+userRepository --> userService : UserEntity
+userService --> userController : UserDTO
+userController --> client : UserDTO ( status 201 )
+
+@enduml

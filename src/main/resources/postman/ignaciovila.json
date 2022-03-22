@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "670e16c6-77b0-449f-a37c-d4962e650826",
+		"name": "Ignacio Vila",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all employees",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IklxblUzVC10bU0tcVpHYzNWNFZ6ayJ9.eyJpc3MiOiJodHRwczovL3hvd2wudXMuYXV0aDAuY29tLyIsInN1YiI6ImU2QVA5WkFRY3d1MjAyaFJuUG1EUWhVMXJaRGMweEQyQGNsaWVudHMiLCJhdWQiOiJodHRwczovL3hvd2wudXMuYXV0aDAuY29tL2FwaS92Mi8iLCJpYXQiOjE2NDQzMjYwNDIsImV4cCI6MTY0NDQxMjQ0MiwiYXpwIjoiZTZBUDlaQVFjd3UyMDJoUm5QbURRaFUxclpEYzB4RDIiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.mimQSX9wpUYwYL6Tt-Yn9gF5_gy-D_qb2EiwahPzJYnuzKytMeAHwVnjAaZ33WtOUpneih7Nc7BZ-GhnZsO9Qw0Ye0arnuQF7_bMYqGfxSMjwR420672jgpvkpXeoNNOP8p2QH3IjmJ-uLWQ0y9ZM8HactVW0nPfu2b5e8kL4nlKgaInYLsd5Mf5BNC_2tNBBH2T-tjMIJC4bpYyQ2mvCGwCrn7mptuBogw1y_n9sRceNs_CedjnHO0fxUVWRr4SCdib1PQx8VKp_Vy0sPu-F-7QEQLptV7i7NOIZMZtewwac69cCzvod2Y8LaAVG53iRpFzofBN8ihV2orNcXsD3A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ignaciovila/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ignaciovila",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get employee by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IklxblUzVC10bU0tcVpHYzNWNFZ6ayJ9.eyJpc3MiOiJodHRwczovL3hvd2wudXMuYXV0aDAuY29tLyIsInN1YiI6ImU2QVA5WkFRY3d1MjAyaFJuUG1EUWhVMXJaRGMweEQyQGNsaWVudHMiLCJhdWQiOiJodHRwczovL3hvd2wudXMuYXV0aDAuY29tL2FwaS92Mi8iLCJpYXQiOjE2NDQzMjYwNDIsImV4cCI6MTY0NDQxMjQ0MiwiYXpwIjoiZTZBUDlaQVFjd3UyMDJoUm5QbURRaFUxclpEYzB4RDIiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.mimQSX9wpUYwYL6Tt-Yn9gF5_gy-D_qb2EiwahPzJYnuzKytMeAHwVnjAaZ33WtOUpneih7Nc7BZ-GhnZsO9Qw0Ye0arnuQF7_bMYqGfxSMjwR420672jgpvkpXeoNNOP8p2QH3IjmJ-uLWQ0y9ZM8HactVW0nPfu2b5e8kL4nlKgaInYLsd5Mf5BNC_2tNBBH2T-tjMIJC4bpYyQ2mvCGwCrn7mptuBogw1y_n9sRceNs_CedjnHO0fxUVWRr4SCdib1PQx8VKp_Vy0sPu-F-7QEQLptV7i7NOIZMZtewwac69cCzvod2Y8LaAVG53iRpFzofBN8ihV2orNcXsD3A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ignaciovila/employees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ignaciovila",
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete employee by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IklxblUzVC10bU0tcVpHYzNWNFZ6ayJ9.eyJpc3MiOiJodHRwczovL3hvd2wudXMuYXV0aDAuY29tLyIsInN1YiI6ImU2QVA5WkFRY3d1MjAyaFJuUG1EUWhVMXJaRGMweEQyQGNsaWVudHMiLCJhdWQiOiJodHRwczovL3hvd2wudXMuYXV0aDAuY29tL2FwaS92Mi8iLCJpYXQiOjE2NDQzMjYwNDIsImV4cCI6MTY0NDQxMjQ0MiwiYXpwIjoiZTZBUDlaQVFjd3UyMDJoUm5QbURRaFUxclpEYzB4RDIiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.mimQSX9wpUYwYL6Tt-Yn9gF5_gy-D_qb2EiwahPzJYnuzKytMeAHwVnjAaZ33WtOUpneih7Nc7BZ-GhnZsO9Qw0Ye0arnuQF7_bMYqGfxSMjwR420672jgpvkpXeoNNOP8p2QH3IjmJ-uLWQ0y9ZM8HactVW0nPfu2b5e8kL4nlKgaInYLsd5Mf5BNC_2tNBBH2T-tjMIJC4bpYyQ2mvCGwCrn7mptuBogw1y_n9sRceNs_CedjnHO0fxUVWRr4SCdib1PQx8VKp_Vy0sPu-F-7QEQLptV7i7NOIZMZtewwac69cCzvod2Y8LaAVG53iRpFzofBN8ihV2orNcXsD3A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ignaciovila/employees/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ignaciovila",
+						"employees",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Link employee to project",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IklxblUzVC10bU0tcVpHYzNWNFZ6ayJ9.eyJpc3MiOiJodHRwczovL3hvd2wudXMuYXV0aDAuY29tLyIsInN1YiI6ImU2QVA5WkFRY3d1MjAyaFJuUG1EUWhVMXJaRGMweEQyQGNsaWVudHMiLCJhdWQiOiJodHRwczovL3hvd2wudXMuYXV0aDAuY29tL2FwaS92Mi8iLCJpYXQiOjE2NDQzMjYwNDIsImV4cCI6MTY0NDQxMjQ0MiwiYXpwIjoiZTZBUDlaQVFjd3UyMDJoUm5QbURRaFUxclpEYzB4RDIiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.mimQSX9wpUYwYL6Tt-Yn9gF5_gy-D_qb2EiwahPzJYnuzKytMeAHwVnjAaZ33WtOUpneih7Nc7BZ-GhnZsO9Qw0Ye0arnuQF7_bMYqGfxSMjwR420672jgpvkpXeoNNOP8p2QH3IjmJ-uLWQ0y9ZM8HactVW0nPfu2b5e8kL4nlKgaInYLsd5Mf5BNC_2tNBBH2T-tjMIJC4bpYyQ2mvCGwCrn7mptuBogw1y_n9sRceNs_CedjnHO0fxUVWRr4SCdib1PQx8VKp_Vy0sPu-F-7QEQLptV7i7NOIZMZtewwac69cCzvod2Y8LaAVG53iRpFzofBN8ihV2orNcXsD3A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"employees\": [\n      {\"id\": 5}\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ignaciovila/projects/5/link",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ignaciovila",
+						"projects",
+						"5",
+						"link"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get project by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IklxblUzVC10bU0tcVpHYzNWNFZ6ayJ9.eyJpc3MiOiJodHRwczovL3hvd2wudXMuYXV0aDAuY29tLyIsInN1YiI6ImU2QVA5WkFRY3d1MjAyaFJuUG1EUWhVMXJaRGMweEQyQGNsaWVudHMiLCJhdWQiOiJodHRwczovL3hvd2wudXMuYXV0aDAuY29tL2FwaS92Mi8iLCJpYXQiOjE2NDQzMjYwNDIsImV4cCI6MTY0NDQxMjQ0MiwiYXpwIjoiZTZBUDlaQVFjd3UyMDJoUm5QbURRaFUxclpEYzB4RDIiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.mimQSX9wpUYwYL6Tt-Yn9gF5_gy-D_qb2EiwahPzJYnuzKytMeAHwVnjAaZ33WtOUpneih7Nc7BZ-GhnZsO9Qw0Ye0arnuQF7_bMYqGfxSMjwR420672jgpvkpXeoNNOP8p2QH3IjmJ-uLWQ0y9ZM8HactVW0nPfu2b5e8kL4nlKgaInYLsd5Mf5BNC_2tNBBH2T-tjMIJC4bpYyQ2mvCGwCrn7mptuBogw1y_n9sRceNs_CedjnHO0fxUVWRr4SCdib1PQx8VKp_Vy0sPu-F-7QEQLptV7i7NOIZMZtewwac69cCzvod2Y8LaAVG53iRpFzofBN8ihV2orNcXsD3A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ignaciovila/projects/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ignaciovila",
+						"projects",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IklxblUzVC10bU0tcVpHYzNWNFZ6ayJ9.eyJpc3MiOiJodHRwczovL3hvd2wudXMuYXV0aDAuY29tLyIsInN1YiI6ImU2QVA5WkFRY3d1MjAyaFJuUG1EUWhVMXJaRGMweEQyQGNsaWVudHMiLCJhdWQiOiJodHRwczovL3hvd2wudXMuYXV0aDAuY29tL2FwaS92Mi8iLCJpYXQiOjE2NDQzMjYwNDIsImV4cCI6MTY0NDQxMjQ0MiwiYXpwIjoiZTZBUDlaQVFjd3UyMDJoUm5QbURRaFUxclpEYzB4RDIiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.mimQSX9wpUYwYL6Tt-Yn9gF5_gy-D_qb2EiwahPzJYnuzKytMeAHwVnjAaZ33WtOUpneih7Nc7BZ-GhnZsO9Qw0Ye0arnuQF7_bMYqGfxSMjwR420672jgpvkpXeoNNOP8p2QH3IjmJ-uLWQ0y9ZM8HactVW0nPfu2b5e8kL4nlKgaInYLsd5Mf5BNC_2tNBBH2T-tjMIJC4bpYyQ2mvCGwCrn7mptuBogw1y_n9sRceNs_CedjnHO0fxUVWRr4SCdib1PQx8VKp_Vy0sPu-F-7QEQLptV7i7NOIZMZtewwac69cCzvod2Y8LaAVG53iRpFzofBN8ihV2orNcXsD3A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"carlos\",\n  \"surname\": \"solari\",\n  \"date_of_birth\": \"1994-07-15T05:00:00Z\",\n  \"role\": \"software developer\",\n  \"nationality\": \"AR\",\n  \"projects\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ignaciovila/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ignaciovila",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create project",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IklxblUzVC10bU0tcVpHYzNWNFZ6ayJ9.eyJpc3MiOiJodHRwczovL3hvd2wudXMuYXV0aDAuY29tLyIsInN1YiI6ImU2QVA5WkFRY3d1MjAyaFJuUG1EUWhVMXJaRGMweEQyQGNsaWVudHMiLCJhdWQiOiJodHRwczovL3hvd2wudXMuYXV0aDAuY29tL2FwaS92Mi8iLCJpYXQiOjE2NDQzMjYwNDIsImV4cCI6MTY0NDQxMjQ0MiwiYXpwIjoiZTZBUDlaQVFjd3UyMDJoUm5QbURRaFUxclpEYzB4RDIiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.mimQSX9wpUYwYL6Tt-Yn9gF5_gy-D_qb2EiwahPzJYnuzKytMeAHwVnjAaZ33WtOUpneih7Nc7BZ-GhnZsO9Qw0Ye0arnuQF7_bMYqGfxSMjwR420672jgpvkpXeoNNOP8p2QH3IjmJ-uLWQ0y9ZM8HactVW0nPfu2b5e8kL4nlKgaInYLsd5Mf5BNC_2tNBBH2T-tjMIJC4bpYyQ2mvCGwCrn7mptuBogw1y_n9sRceNs_CedjnHO0fxUVWRr4SCdib1PQx8VKp_Vy0sPu-F-7QEQLptV7i7NOIZMZtewwac69cCzvod2Y8LaAVG53iRpFzofBN8ihV2orNcXsD3A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"company\": \"visa\",\n  \"employees\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ignaciovila/projects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ignaciovila",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
